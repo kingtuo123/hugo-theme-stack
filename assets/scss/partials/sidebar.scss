@@ -7,7 +7,8 @@
 }
 
 .left-sidebar {
-    display: flex;
+    display: block;
+    margin-bottom: -15px;
     flex-direction: column;
     flex-shrink: 0;
     align-self: stretch;
@@ -22,6 +23,8 @@
     --emoji-font-size: 20px;
 
     @include respond(md) {
+        display: flex;
+        margin-bottom: 0px;
         width: auto;
         padding-top: var(--main-top-padding);
         padding-bottom: var(--main-top-padding);
@@ -127,6 +130,10 @@
         flex-direction: column;
         gap: 10px;
         justify-content: center;
+        margin-bottom: 15px;
+        @include respond(md) {
+            margin-bottom: 0px;
+        }
     }
 
     .site-name {

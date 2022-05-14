@@ -135,6 +135,7 @@
     flex-grow: 1;
     font-size: 1.4rem;
     background-color: var(--card-background);
+    padding-bottom: auto;
 
     box-shadow: var(--shadow-l1);
     display: none;
@@ -149,12 +150,13 @@
     .menu-bottom-section {
         gap: 30px;
         @include respond(xl) {
-            gap: 25px;
+            gap: 35px;
         }
     }
 
     &.show {
-        display: flex;
+        display: block;
+        padding-bottom: 0px;
     }
 
     @include respond(md) {
@@ -170,9 +172,11 @@
         position: relative;
         vertical-align: middle;
         padding: 0;
+        margin-bottom: 30px;
 
         @include respond(md) {
             width: 100%;
+            margin-bottom: 0px;
         }
 
         svg {
